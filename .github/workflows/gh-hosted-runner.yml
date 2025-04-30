@@ -19,7 +19,8 @@ jobs:
         python3 --version
         cmake --version
         file "C:\Program Files\CMake\bin\cmake.exe"
-        file "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\devenv.exe"      
+        file "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\devenv.exe"    
+        file "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\devenv.com"
         git --version
         file "C:\Program Files\Git\bin\git.exe"
         file "C:\Program Files\Git\bin\bash.EXE" 
