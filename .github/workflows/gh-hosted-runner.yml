@@ -13,6 +13,20 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+
+    - name: Display Runner Details
+      run: |
+        echo "Operating System: $RUNNER_OS"
+        echo "Runner Name: $RUNNER_NAME"
+        echo "Runner Architecture: $RUNNER_ARCH"
+        echo "Image Version:"
+        cat /etc/os-release || ver # For Windows runners, `ver` gives OS version
+        echo "CPU Info:"
+        lscpu || systeminfo | find "Processor" # CPU info for Linux/Windows
+        echo "Memory Info:"
+        free -h || systeminfo | find "Total Physical Memory" # Memory info for Linux/Windows
+        echo "Disk Info:"
+        df -h || wmic logicaldisk get size,freespace,caption # Disk info for Linux/Windows
   
     - name: Check packages
       run: |
