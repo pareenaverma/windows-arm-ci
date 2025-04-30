@@ -14,14 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Log Windows System Details
-      run: |
-        echo "OS Information:"
-        systeminfo
-        echo "Environment Variables:"
-        set
-      shell: cmd
-  
+
     - name: Check packages
       run: |
         python3 --version
@@ -32,6 +25,8 @@ jobs:
         git --version
         file "C:\Program Files\Git\bin\git.exe"
         file "C:\Program Files\Git\bin\bash.EXE" 
+        clang --version
+        file "C:\Program Files\LLVM\clang.exe"
 
     - name: Run Bash Command
       run: |
