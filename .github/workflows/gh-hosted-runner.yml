@@ -33,7 +33,7 @@ jobs:
 
     - name: Call Visual Studio devenv.com
       run: |
-        "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\devenv.com"
+        "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\devenv.com" /?
       shell: cmd
         
         
