@@ -1,0 +1,28 @@
+name: Test
+
+on:
+  workflow_dispatch  :
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: windows-11-arm
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v3
+
+    - name: Check packages
+      run: |
+        python3 --version
+        cmake --version
+        file "C:\Program Files\CMake\bin\cmake.exe"
+        file "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\devenv.exe"      
+        git --version
+        where git
+        
+        
