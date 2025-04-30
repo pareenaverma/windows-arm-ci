@@ -22,5 +22,11 @@ jobs:
         file "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\devenv.exe"      
         git --version
         file "C:\Program Files\Git\bin\git.exe"
+
+    - name: Run Bash Command
+      run: |
+        echo "Running a Bash command on Windows"
+        pwd
+      shell: bash
         
         
