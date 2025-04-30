@@ -26,7 +26,7 @@ jobs:
         file "C:\Program Files\Git\bin\git.exe"
         file "C:\Program Files\Git\bin\bash.EXE" 
         clang --version
-        file "C:\Program Files\LLVM\clang.exe"
+        dir "C:\Program Files\"
 
     - name: Run Bash Command
       run: |
